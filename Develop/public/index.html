@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Fitness Tracker</title>
+    </head>
+<!-- Body -->
+    <body>
+        <nav>
+            <a href="/">Fitness Tracker</a>
+            <a href="">Dashboard</a>
+        </nav>
+        <div class="wrapper workout">
+            <header>
+                <h1>
+                    Fitness Tracker
+                </h1>
+            </header>
+            <div class="container workout">
+                <div class="card">
+                    <div class="prev-workout">
+                        <h3>Last Workout</h3>
+                        <div>
+                            <div class="workout-stats"></div>
+                            <div class="buttons">
+                                <a id="continue-btn" href="/exercise?" class="btn btn-primary">Continue Workout</a>
+                                <a href="/exercise" class="btn btn-success">New Workout</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-workout">
+                        <h3>Create Your First Workout</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="added">Workout Added to Tracker</div>
+        <script src="/api.js"></script>
+        <script src="/workout.js"></script>
+        <script src=/index.js></script>
+    </body>
+</html>

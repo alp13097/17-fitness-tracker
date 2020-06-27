@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Fitness Tracker</title>
+    </head>
+
+<!-- Body -->
+    <body>
+        <nav>
+            <a href="/">Fitness Tracker</a>
+            <a href="/stats.html">Dashboard</a>
+        </nav>
+        <div class="wrapper">
+            <header>
+                <h1>Fitness Tracker</h1>
+            </header>
+            <div class="container">
+                <div class="card">
+                    <h2>Add New Exercise</h2>
+                    <form action="POST">
+                        <div class="form-group workout-type">
+                            <label for="type">Exercise Type:</label>
+                            <select name="type" class="form-control" id="type">
+                              <option value="resistance">Resistance</option>
+                              <option value="cardio">Cardio</option>
+                            </select>
+                          </div>
+                          <div class="cardio-form d-none">
+                              <div class="cardio-name">
+                                  <label for="cardio-name">Name of Exercise:</label>
+                                  <input type="text" name="cardio-name" id="cardio-name" placeholder="Enter Name of Exercise" />
+                              </div>
+                              <div class="distance">
+                                  <label for="distance">Distance:</label>
+                                  <input type="number" name="distance" id="distance" placeholder="0" />
+                              </div>
+                              <div class="duration">
+                                  <label for="duration">Time:</label>
+                                  <input type="number" name="duration" id="duration" placeholder="0" />
+                              </div>
+                          </div>
+                          <div class="resistance-form d-none">
+                              <div class="exercise">
+                                  <label for="name">Name of Exercise:</label>
+                                  <input type="text" name="name" id="name" placeholder="Name of Exercise" />
+                              </div>
+                              <div class="weight">
+                                  <label for="weight">Weight in Pounds:</label>
+                                  <input type="number" name="weight" id="weight" placeholder="0" />
+                              </div>
+                              <div class="sets">
+                                  <label for="sets">Number of Sets:</label>
+                                  <input type="number" name="sets" placeholder="0" />
+                              </div>
+                              <div class="reps">
+                                  <label for="reps">Number of Reps:</label>
+                                  <input type="number" name="reps" id="reps" placeholder="0" />
+                              </div>
+                              <div class="resistance-duration">
+                                <label for="resistance-duration">Duration of Exercise:</label>
+                                <input type="number" name="resistance-duration" id="resistance-duration" placeholder="0" />
+                              </div>
+                          </div>
+                          <div class="buttons">
+                              <button disabled class="btn btn-primary submit">Submit</button>
+                              <button disabled class="btn btn-success add-workout">Add Exercise</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="added">Workout Added to Tracker</div>
+        <script src="/api.js"></script>
+        <script src="/exercise.js"></script>
+    </body>
+</html>
